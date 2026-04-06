@@ -18,7 +18,7 @@ app.get("/api/board", (req, res) => {
 });
 
 const path = require("path");
-const publicPath = path.join(__dirname, "dist");
+const publicPath = path.join(__dirname, "public");
 app.use(express.static(publicPath));
 
 app.get("/", function (req, res) {
