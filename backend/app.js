@@ -22,9 +22,9 @@ const publicPath = path.join(__dirname, "dist");
 app.use(express.static(publicPath));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(publicPath, "./dist", "index.html"));
+  res.sendFile(path.join(publicPath, "./public", "index.html"));
 });
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "./dist", "index.html"));
+  res.status(404).sendFile(path.join(__dirname, "./public", "index.html"));
 });
